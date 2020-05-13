@@ -1,16 +1,9 @@
 var mysql      = require('mysql');
-var connection = mysql.createConnection({
-  host     : 'localhost',
-  user     : 'root',
-  password : 'omOM@!123',		//CHANGE YOUR PASSWORD HERE
-  database : 'website'
-});
-connection.connect(function(err){
-if(!err) {
-    console.log("Database is connected");
-} else {
-    console.log("Error while connecting with database: " + err);
-}
+var connection = mysql.createPool({
+  host     : 'us-cdbr-east-06.cleardb.net',
+  user     : 'ba96d6a693dcdc',
+  password : 'a4a06c30',		//CHANGE YOUR PASSWORD HERE
+  database : 'heroku_2c7099f26b99f36'
 });
 
 module.exports = connection;

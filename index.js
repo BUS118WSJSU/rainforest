@@ -11,26 +11,10 @@ app.use("images", express.static(__dirname + "/public/images"));
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-app.get('/', function (req, res) {
-   res.redirect('/test.html')
-})
 
-app.get('*', function(req, res){
-	res.redirect('/test.html')
+app.get('/Index.html', function (req, res) {
+   res.redirect('/')
 })
-
-app.get('/test.html', function(req, res){
-	res.sendFile("test.html");
-})
-
-app.get('/login.html', function (req, res) {
-   res.sendFile( "login.html" );
-})
-
-app.get('/signup.html', function(req, res){
-	res.sendFile("signup.html");
-})
-
 
 app.post('/signup', function(req, res){
 	conn.query("INSERT INTO users VALUES (?, ?, ?);", [req.body.email, req.body.username, req.body.password], function(error, results, fields){
@@ -84,5 +68,6 @@ app.post('/login', function(req, res){
 
 })
 
-
-app.listen(3000);
+app.listen(process.env.PORT || 3000, function(){
+	console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  });

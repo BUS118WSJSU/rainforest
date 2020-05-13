@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Save the Amazon</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="TestCSS1.css">
+    <link rel="stylesheet" type="text/css" href="Login.css">
+
+<div class="topnav">
+      <input id="search" type="text" placeholder="Search...">
+      <p id="search-results"></p>
+      <a href="GetInvolved.html">Get Involved</a>
+      <a href="OurStories.html">Our Stories</a>
+      <a href="OurExperts.html">Our Experts</a>
+      <a href="OurWork.html">Our Work</a>
+      <a href="Index.html">Home</a>
+      <img src="amazonrainforestsociety_logo.png" alt="Amazon Rainforest Society Logo" height="27" width="133">
+</div>
+
+
+</head>
+
+<body>
+    <form id="login-form">
+      <div class="imgcontainer">
+        <img src="img_avatar2.png" alt="Avatar" class="avatar">
+      </div>
+
+      <div class="container">
+        <label for="username">
+        </label>
+        <input id="username" type="text" placeholder="Enter Username" name="username" required>
+
+        <label for="password"></label>
+        <input id="password" type="password" placeholder="Enter Password" name="password" required>
+
+        <button type="submit">Login</button>
+        <label>
+          <input type="checkbox" checked="checked" name="remember"> Remember me
+        </label>
+        <p><button type="button" class="cancelbutton">Cancel</button>
+        <span class="password">Forgot <a href="#">password?</a></span></p>
+
+      </div>
+    </form>
+
+    <script type="text/javascript">
+      const form1 = document.getElementById("login-form");
+      form1.addEventListener("submit", (e)=>{
+        e.preventDefault();
+        const request = new XMLHttpRequest()
+        request.open("post", "/login");
+        request.onload = function(){
+          const json = JSON.parse(request.response);
+          if (json.success){
+            window.alert(json.message);
+            window.location.href = 'Index.html';
+          }
+          else{
+            window.alert(json.message);
+          }
+        }
+        var data = {
+          username: document.getElementById("username").value,
+          password: document.getElementById("password").value
+        }
+        request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
+        request.send(JSON.stringify(data));
+      })
+    </script>
+</div>
+
+</body>
+
+</html>

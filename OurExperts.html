@@ -1,0 +1,163 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="testCSS1.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+<script src="Search.js"></script>
+<script>
+  $(document).ready(function(){
+    $("#quote1").hide();
+    $("#bt_quote1").click(function(){
+      $("#quote1").toggle();
+      if($("#quote1"). is(":visible")){
+        $("#bt_quote1").text("I've seen enough!");
+      }
+      else{
+        $("#bt_quote1").text("See what he has to say");
+      }
+    });
+  });
+  $(document).ready(function(){
+    $("#quote2").hide();
+    $("#bt_quote2").click(function(){
+      $("#quote2").toggle();
+      if($("#quote2"). is(":visible")){
+        $("#bt_quote2").text("I've seen enough!");
+      }
+      else{
+        $("#bt_quote2").text("See what he has to say");
+      }
+    });
+  });
+  $(document).ready(function(){
+    $("#quote3").hide();
+    $("#bt_quote3").click(function(){
+      $("#quote3").toggle();
+      if($("#quote3"). is(":visible")){
+        $("#bt_quote3").text("I've seen enough!");
+      }
+      else{
+        $("#bt_quote3").text("See what he has to say");
+      }
+    });
+  });
+</script>
+</head>
+  <body><center>
+
+<div class="topnav">
+      <input id="search" type="text" placeholder="Search...">
+      <p id="search-results"></p>
+      <a href="GetInvolved.html">Get Involved</a>
+      <a href="OurStories.html">Our Stories</a>
+      <a class="active" href="OurExperts.html">Our Experts</a>
+      <a href="OurWork.html">Our Work</a>
+      <a href="Index.html">Home</a>
+      <img src="amazonrainforestsociety_logo.png" alt="Amazon Rainforest Society Logo" height="27" width="133">
+</div>
+    <br><br>
+
+     <h3><center>OUR EXPERTS</center></h3>
+	 <img src="Jaguar_at_Edinburgh_Zoo.jpg" alt="Snow" style = "width: 30%; min-height: 20px; padding: 5px; border-radius: 10%;"><center>
+    <table id>
+      <tr>
+        <td>
+          <img src="Expert1.jpg" alt="Snow" style = "width: 65%; min-height: 150px; padding: 5px; border-radius: 50%;"><center>
+            <h3>John Brown</h3>
+            San Jose State University <br>Environmental Studies </br>
+            <button id="bt_quote1">See what he has to say</button>
+            <br><br><small id="quote1">"There is always a time to stop <br> and think about Mother Nature... <br> What does she give us? <br>And what we can give her back?"</small></center>
+        </td>
+
+        <td>
+          <img src="Expert3.jpg" alt="Snow" style = "width: 65%; min-height: 150px; padding: 5px; border-radius: 50%;"><center>
+            <h3>Rob Green</h3>
+            University of Davis <br>Department of Biology</br>
+            <button id="bt_quote2">See what he has to say</button>
+            <br><br><small id="quote2">"There is no such as thing as 'helping tomorow'... <br> but there is 'helping now!'."</small></center>
+        </td>
+
+        <td>
+          <img src="Expert2.jpg" alt="Snow" style = "width: 65%; min-height: 160px; padding: 5px; border-radius: 50%;"><center>
+            <h3>Nick Green</h3>
+            Sacramento State University <br>Recreational Studies </br>
+            <button id="bt_quote3">See what he has to say</button>
+			<br><br><small id="quote3">"During this terrible time, <br> think about those who can't help themselves.<br> And about those who can help them. <br> Yes, I am talking about us, people."</small></center>
+
+        </td>
+      </tr>
+    </table>
+
+    <div class="bgimg-1">
+  <div class="caption">
+    <span class="border" style="background-color:transparent;font-size:25px;color: #f7f7f7;"></span>
+  </div>
+</div>
+
+<div class="navbarbottom">
+  <table>
+    <tr>
+      <td>
+        <table>
+          <tr><img src="amazonrainforestsociety_logo.png" alt="Amazon Rainforest Society Logo" height="55" width="280"></tr>
+	  <tr><br><p><small>Amazon Rainforest Society is a nonprofit organization that is based in San Jose, California. Our organization envisions a thriving Amazon that sustains the full diversity of life.</small></p></tr>
+	  <tr><p style="font-size: 14px;"> Address: 1 Washington Square, San Jose, CA 95152
+              <br> Phone: (408) 123-4567
+              <br> Email: info@amazonrainforestsociety.org</p>
+          </tr>
+        </table>
+      </td>
+      <td>
+         <table>
+	   <tr><iframe src="https://www.google.com/maps/d/embed?mid=1zyvZupNhamBmRvzoXf1b1tCfpF8&hl=en" width="350" height="260"></iframe></tr>
+	</table>
+      </td>
+      <td>
+         <table>
+          <tr><br>QUICK LINKS</tr>
+	  <tr><br><a href="SignUp.html">Become a Volunteer</a></tr>
+          <tr><br><a href="login.html">Login</a></tr>
+	  <tr><br>-</tr>
+          <tr><br><a href="OurWork.html">Overview/Projects</a></tr>
+          <tr><br><a href="OurExperts.html">Our Members</a></tr>
+          <tr><br><a href="OurStories.html">Testimonials</a></tr>
+
+          <tr><br><a href="GetInvolved.html">Contact Us</a></tr>
+        </table>
+      </td>
+      <td>
+         <table>
+
+          <tr>SUBSCRIBE TO OUR NEWSLETTER <br><input type="text" placeholder="E-mail"></tr>
+          <tr>
+            <br><br>MAKE A DONATION
+            <br><img src="testimgvisa.jpg" alt="VISA" style = "width: 50px; height: 25px; padding: 5px;">
+                <img src="testimgmastercard.jpg" alt="VISA" style = "width: 50px; height: 25px; padding: 5px;">
+                <img src="testimgpaypal.jpg" alt="PAYPAL" style = "width: 50px; height: 25px; padding: 5px;">
+                <img src="testimgdiscover.jpg" alt="DISCOVER" style = "width: 50px; height: 25px; padding: 5px;">
+          </tr>
+         </table>
+      </td>
+    </tr>
+  </table>
+</div>
+<script>
+window.onscroll = function() {myFunction()};
+
+var topnav = document.getElementById("topnav");
+var sticky = topnav.offsetTop;
+
+function myFunction() {
+  if (window.pageYOffset >= sticky) {
+    topnav.classList.add("sticky")
+  } else {
+    topnav.classList.remove("sticky");
+  }
+}
+</script>
+
+</body>
+</html>
